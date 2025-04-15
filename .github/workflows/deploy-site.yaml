@@ -12,28 +12,45 @@ jobs:
     steps:
     # checkout to the commit that has been pushed
     - uses: actions/checkout@v4
+      with:
+        submodules: true
+        fetch-depth: 0
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: 'latest'
+        hugo-version: '0.142.0'
         extended: true
-
-    - name: Update Hugo Modules
-      run: hugo mod tidy
 
     - name: Setup Node
       uses: actions/setup-node@v4
       with:
         node-version: 20
+        cache: 'npm'
 
-    - name: Install node modules
+    - name: Cache Hugo modules
+      uses: actions/cache@v3
+      with:
+        path: /tmp/hugo_cache
+        key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-hugomod-
+
+    - name: Clean and Update Hugo Modules
+      run: |
+        hugo mod clean
+        hugo mod get -u
+        hugo mod tidy
+
+    - name: Install Node.js dependencies
       run: |
         hugo mod npm pack
         npm install
 
     - name: Build
-      run: hugo --minify
+      run: |
+        hugo --minify
+        ls -la public/
 
     # push the generated content into the `gh-pages` branch.
     - name: Deploy
@@ -42,3 +59,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: ./public
+        force_orphan: true
