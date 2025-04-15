@@ -1,0 +1,125 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Lead Software Engineer
+# your company information
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/resume.pdf"
+
+# a summary about you
+summary: |
+  Passionate Software Engineer with expertise in developing cloud-focused applications using .NET, C#, and Azure technologies. Currently working as a Technical/Lead/Senior Developer helping clients optimize their software solutions through robust architecture design and implementation.  
+
+  Key areas of expertise include:
+
+  - Leading development teams on complex cloud projects
+  - Implementing DevOps strategies and Infrastructure as Code
+  - Architecting scalable cloud solutions on Azure
+  - MLOps implementation and optimization
+  - AI Agent development and integration
+  - Applying software engineering patterns and principles
+
+  Committed to delivering high-quality solutions that align with best practices while helping organizations modernize their technical approach and development processes.
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "mkiruba@gmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://github.com/mkiruba"
+
+- name: Stackoverflow
+  icon: "fab fa-stack-overflow"
+  url: "https://stackoverflow.com/users/578738/kiru"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/kiru/"
+
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name: Python Project for Data Science
+  url: "https://www.credly.com/badges/0b0b96c1-ec9c-4d4f-9594-0fac24a209e9"
+  badge: "https://images.credly.com/size/340x340/images/4dd14b9d-2750-43bc-a5f6-27970c0de0fa/image.png"
+
+- type: certification
+  name: Machine Learning with Python (V2)
+  url: "https://www.credly.com/earner/earned/badge/fa9bdd83-f665-453a-9b13-9078b840933f"
+  badge: "https://images.credly.com/size/340x340/images/56c60565-e945-4bcd-b8a6-9b2f43e1b0d9/Coursera_20Machine_20Learning_20with_20Python_20V2.png"
+
+- type: certification
+  name: Python for Data Science and AI
+  url: "https://www.credly.com/earner/earned/badge/aad22412-2acb-44b9-9037-700526a41468"
+  badge: "https://images.credly.com/size/340x340/images/40bee502-a5b3-4365-90e7-57eed5067594/image.png"
+
+- type: certification
+  name: Professional Scrum Master™ I (PSM I)
+  url: "https://www.credly.com/earner/earned/badge/b39dccdc-46ee-44fe-b5ca-c0e47097e63a"
+  badge: "https://images.credly.com/size/340x340/images/a2790314-008a-4c3d-9553-f5e84eb359ba/image.png"
+
+- type: certification
+  name: MongoDB Associate Developer
+  url: "https://www.credly.com/earner/earned/badge/dd35c3cd-9400-4e44-87ef-80478ad5dafe"
+  badge: "https://images.credly.com/size/340x340/images/6096167c-91fd-4e74-bc85-d2100672fef7/image.png"
+  
+- type: certification
+  name: Developing ASP.NET MVC Web Applications
+  url: "https://www.credly.com/earner/earned/badge/00c7f5a9-18dd-4d29-8578-02a3e6b8450f"
+  badge: "https://images.credly.com/size/340x340/images/cbab3216-025d-4601-86ee-c5970b348d48/Developing_ASP.NET_MVC_Web_Applications-01.png"
+  
+- type: certification
+  name: Programming in HTML5 with JavaScript and CSS3
+  url: "https://www.credly.com/earner/earned/badge/bf847828-4b8d-4e4a-8afd-0645d358e89b"
+  badge: "https://images.credly.com/size/340x340/images/84f513e4-256d-4aa0-a29d-973bcb39d87a/Programming_in_HTML5_with_JavaScript_and_Css3-01.png"
+
+- type: certification
+  name: Developing Microsoft Azure and Web Services
+  url: "https://www.credly.com/earner/earned/badge/10310106-7ba1-4b42-bdc1-271487064a66"
+  badge: "https://images.credly.com/size/340x340/images/ff9e3554-46b8-474d-8a8c-9285284e6c83/Developing_Microsoft_Azure_and_Web_Services-01.png"
+
+- type: certification
+  name: MCSD App Builder — Certified 2016
+  url: "https://www.credly.com/earner/earned/badge/94e4e3a5-0ad6-42e2-a4a6-5acd8a26ed41"
+  badge: "https://images.credly.com/size/340x340/images/9c42deab-bb34-4a70-b8d8-63b6f452fed8/MCSD_App_Builder-01.png"
+
+- type: certification
+  name: MCSA Web Applications - Certified 2016
+  url: "https://www.credly.com/earner/earned/badge/b7e861f7-06ec-49c9-acc3-c6440ed964dc"
+  badge: "https://images.credly.com/size/340x340/images/421ca115-c03d-403d-893c-da7652bb8619/MCSA_Web_Applications-01.png"
+
+- type: soft-skill-indicator
+  name: Software Development
+  percentage: 85
+  color: blue
+
+- type: soft-skill-indicator
+  name: Cloud Technologies
+  percentage: 90
+  color: yellow
+
+- type: soft-skill-indicator
+  name: AI Agent Development
+  percentage: 65
+  color: orange
+
+# you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Example 1
+#   percentage: 75
+#   color: "#00adb5"

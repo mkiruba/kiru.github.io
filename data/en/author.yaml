@@ -1,0 +1,19 @@
+# some information about you
+name: "Kiru Marimuthu"
+nickname: "Kiru"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/kiru.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "mkiruba@gmail.com"
+  github: https://github.com/mkiruba/
+  linkedin: https://www.linkedin.com/in/kiru/
+
+# some summary about what you do
+summary:
+  - I am a Software Engineer
+  - I am an Architect
+  - I build SaaS applications
+  - I am a Cloud Expert
+  - I love to work with AI projects
