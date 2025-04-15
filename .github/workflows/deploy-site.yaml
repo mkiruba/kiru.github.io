@@ -9,6 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     # checkout to the commit that has been pushed
     - uses: actions/checkout@v4
@@ -51,12 +53,18 @@ jobs:
       run: |
         hugo --minify
         ls -la public/
+        echo "kiru.github.io" > public/CNAME
 
     # push the generated content into the `gh-pages` branch.
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
+      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: ./public
         force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: 'Deploy Hugo site to GitHub Pages'
+        cname: kiru.github.io
